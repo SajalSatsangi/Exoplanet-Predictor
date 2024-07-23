@@ -7,4 +7,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["gunicorn", "--bind", "0.0.0.0:$PORT", "app:app"]
+# Default port value (can be overridden by environment variable)
+ENV PORT 5000
+
+CMD ["gunicorn", "--bind", "0.0.0.0:${PORT}", "app:app"]
