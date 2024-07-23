@@ -1,15 +1,14 @@
 {
-    "version": 2,
-    "functions": {
-      "api/*.py": {
-        "runtime": "vercel-python@0.6.0"
-      }
-    },
-    "routes": [
-      {
-        "src": "/api/predict",
-        "dest": "/api/predict.py"
-      }
-    ]
-  }
-  
+  "version": 2,
+  "functions": {
+    "api/handler.js": {
+      "runtime": "nodejs14.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/predict",
+      "dest": "/api/handler.js"
+    }
+  ]
+}

@@ -5,7 +5,7 @@ import numpy as np
 app = Flask(__name__)
 
 # Load the trained model
-model = joblib.load('random_forest_model.pkl')
+model = joblib.load('/tmp/random_forest_model.pkl')
 
 @app.route('/api/predict', methods=['POST'])
 def predict():
