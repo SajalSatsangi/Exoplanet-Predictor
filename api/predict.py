@@ -2,10 +2,10 @@ from flask import Flask, request, jsonify
 import joblib
 import numpy as np
 
-app = Flask(__name__)
+app = Flask(_name_)
 
 # Load the trained model
-model = joblib.load('/tmp/random_forest_model.pkl')
+model = joblib.load('random_forest_model.pkl')
 
 @app.route('/api/predict', methods=['POST'])
 def predict():

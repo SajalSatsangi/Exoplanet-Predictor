@@ -1,14 +1,15 @@
 {
   "version": 2,
-  "functions": {
-    "api/handler.js": {
-      "runtime": "nodejs14.x"
+  "builds": [
+    {
+      "src": "Dockerfile",
+      "use": "@vercel/docker"
     }
-  },
+  ],
   "routes": [
     {
       "src": "/api/predict",
-      "dest": "/api/handler.js"
+      "dest": "/api/predict.py"
     }
   ]
 }
