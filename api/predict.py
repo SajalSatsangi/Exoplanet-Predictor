@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import joblib
 import numpy as np
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # Load the trained model
 model = joblib.load('random_forest_model.pkl')
