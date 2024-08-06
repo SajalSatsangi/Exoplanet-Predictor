@@ -89,7 +89,7 @@ export default function Predictor() {
             <Input type="number" placeholder="138" />
             <Input type="number" placeholder="138" />
             <Input type="number" placeholder="138" />
-            <Button type="submit">Run Prediction</Button>
+            <Button  as={Link} href="/result">Run Prediction</Button>
           </Form>
         </PredictorCard>
       </Main>
